@@ -1,0 +1,13 @@
+version: '3'
+services:
+  putch-mutt-ui:
+    build:
+      context: ./ui
+    ports:
+      - "4321:4321"
+    container_name: putch-mutt-ui
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./ui:/usr/src/app  # Mount the app code, but not node_modules
+      - /usr/src/app/node_modules  # Prevent node_modules from being mounted

@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets"
+import productSide1 from "../resources/images/products/product-side1.png"
+import productSide2 from "../resources/images/products/product-side2.png"
+import productSide3 from "../resources/images/products/product-side3.png"
+---
+<div class="product-side-images">
+    <div class="thumbnail-images">
+        <div>
+            <Image src={productSide1} class="image" alt="product side 1">
+        </div>
+        <div>
+            <Image src={productSide2} class="image" alt="product side 2">
+        </div>
+        <div>
+            <Image src={productSide3} class="image" alt="product side 3">
+        </div>
+    </div>
+</div>
+
+<style>
+    .product-side-images{
+        flex: 1;
+    }
+
+    .thumbnail-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .thumbnail-images image {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 5px solid var(--colourPrimary);
+    }
+
+    @media (max-width: 940px) {
+        .product-side-images{
+            display: none;
+        }
+    }
+  
+</style>

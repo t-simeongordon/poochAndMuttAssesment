@@ -1,0 +1,123 @@
+---
+import { Image } from 'astro:assets';
+import logoFull from "../resources/images/header/logo-full.png"
+import iconSearch from "../resources/images/header/icon-search.png"
+import iconUser from "../resources/images/header/icon-user.png"
+import iconCart from "../resources/images/header/icon-cart.png"
+import iconMenu from "../resources/images/header/icon-menu.png"
+---
+<nav>
+  <div class="nav-links">
+    <ul>
+      <li><a href="/product">Shop</a></li>
+      <li><a href="#">Find your food</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+  </div>
+  <div class="nav-menu">
+    <Image src={iconMenu} alt="" height="24" width="24">
+  </div>
+  <div class="logo">
+    <a href="/">
+      <Image src={logoFull} height="34" width="74" alt="Pooch & Mutt">
+    </a>
+  </div>
+  <div class="nav-icons">
+    <ul>
+      <li>
+          <a href="#">
+            <Image src={iconSearch} height="24" width="24" alt="search icon">
+          </a>
+      </li>
+      <li>
+        <a href="#">
+          <Image src={iconUser} height="24" width="24" alt="user icon">
+        </a>
+    </li>
+    <li>
+        <a href="#">
+          <Image src={iconCart} height="24" width="24" alt="cart icon">
+        </a>
+    </li>
+    </ul>
+  </div>
+</nav>
+
+
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 9px;
+    background-color: white;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  
+  nav div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav ul{
+    display: flex;
+  }
+  nav ul {
+    list-style: none;
+
+    gap: 20px;
+  } 
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+
+  nav .nav-links{
+    display: flex;
+  }
+
+  nav .nav-menu{
+      display: none;
+  }
+
+  .nav-icons ul{
+    display: flex;
+  }
+
+  .nav-icons li{
+    list-style: none;
+  }
+
+  a.active{
+    color: rgba(rgb(94, 40, 40), 100%);
+    font-weight: bolder;
+  }
+
+  @media (max-width: 940px) {
+    nav .nav-menu{
+      display: flex;
+    }
+
+    nav .nav-links{
+      display: none;
+    }
+
+    .nav-icons li:nth-child(1),
+    .nav-icons li:nth-child(2) {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const { pathname } = window.location
+
+  const activeNav = document.querySelector(`nav a[href="${pathname}"]`)
+  
+  if(activeNav){
+    activeNav.classList.add("active")
+  }
+</script>

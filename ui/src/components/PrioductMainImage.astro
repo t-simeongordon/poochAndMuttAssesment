@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+import  productMain from '../resources/images/products/product-main.png';
+---
+<div class="product-images">
+    <Image src={productMain} alt="Main Product" class="main-image">
+</div>
+
+<style>
+    .product-images {
+        flex: 10;
+    }
+
+    .main-image {
+        width: 100%;
+        border-radius: 10px;
+    }
+  
+</style>

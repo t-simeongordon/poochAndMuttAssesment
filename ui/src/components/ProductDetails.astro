@@ -1,0 +1,422 @@
+---
+import { Image } from "astro:assets";
+import starFilled from "../resources/images/icon-star-filled.png"
+---
+<div class="product-details">
+    <div class="section-container">
+        <h1>Health & Digestion Dry Food</h1>
+        <div class="rating">
+            <div>
+                <Image src={starFilled} alt="Star" class="star-icon">
+            </div>
+            <div>
+                <Image src={starFilled} alt="Star" class="star-icon">
+            </div>
+            <div>
+                <Image src={starFilled} alt="Star" class="star-icon">
+            </div>
+            <div>
+                <Image src={starFilled} alt="Star" class="star-icon">
+            </div>
+            <div>
+                <Image src={starFilled} alt="Star" class="star-icon">
+            </div>
+            <div>(48)</div>
+        </div> 
+      
+        <div class="item-price">
+            <h3 class="current-price">£6.37</h3> <p class="original-price p1">£8.48</p>
+            <span class="points s2">+18 PoochPoints</span>
+        </div>
+    </div>
+
+    
+
+    <div class="section-container">
+        <div class="quantity-container">
+            <label for="quantity">Quantity</label>
+            <div class="select-wrapper">
+                <select id="quantity" class="custom-select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="subscription-container">
+            <h2>Subscribe & Save 25%!</h2>
+            <div class="subscription-options">
+                <label class="radio-container">
+                    <span class="p2">Subscription</span>
+                    <input type="radio" name="subscription-type" checked>
+                    <div class="radio-circle"></div>
+                </label>
+                <label class="radio-container p2">
+                    <input type="radio" name="subscription-type">
+                    <span class="p2">One-off</span>
+                    <div class="radio-circle"></div>
+                </label>
+            </div>
+            <div class="delivery-frequency">
+                <label for="frequency">Delivery Frequency</label>
+                <div class="select-wrapper">
+                <select id="frequency" class="delivery-frequency-dropdown">
+                    <option class="p2" value="30days">30days</option>
+                    <option value="60days">60days</option>
+                    <option value="90days">90days</option>
+                </select>
+                </div>
+            </div>
+            <button class="add-to-basket">Add to Basket</button>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <p class="product-info">
+            Grain-free, junk-free complete dry food for sensitive dogs
+        </p>
+        <ul>
+            <li>Hypoallergenic</li>
+            <li>Vet recommended</li>
+            <li>Prebiotics for gut health</li>
+        </ul>
+    </div>
+
+    <div class="section-container">
+        <div class="custom-mailing-list-container">
+            <h2>Join our mailing list</h2>
+            <form class="custom-mailing-list-form">
+            <label for="email">Email Address</label>
+            <input type="email" id="custom-email-input" name="email" placeholder="johndoe@email.com" required>
+            
+            <button type="submit" class="custom-submit-button">Submit</button>
+        
+            <label class="custom-checkbox-container">
+                <input type="checkbox" id="custom-terms-checkbox" name="terms" required>
+                I agree to the Terms & Conditions
+            </label>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .product-details {
+        flex: 5;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-container{
+        width: 100%;
+        margin-bottom: 3%;
+    }
+
+    /* star system */
+    .rating {
+        display: flex;
+        font-size: 1.2rem;
+        gap: 5px;
+    }
+
+    .star-icon {
+        width: 24px; 
+        height: 24px;
+    }
+
+
+
+    /* pricing for pooch and mutt product */
+    .item-price {
+        margin-top: 10px;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .current-price {
+        font-weight: bold;
+        color: var(--colourBrand);
+    }
+    
+    .original-price {
+        text-decoration: line-through;
+        margin-left: 10px;
+        color: var(--colourPrimary);
+    }
+    
+    .points {
+        color: var(--colourBrand);
+        margin-left: 10px;
+    }
+
+
+
+    /* quantity dropdown */
+    .quantity-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    }
+
+    .select-wrapper {
+    position: relative;
+    width: 100%;
+    }
+
+    .custom-select {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    font-size: 1.2em;
+    border: 1px solid black;
+    border-radius: 5px;
+    appearance: none; 
+    background-color: white;
+    background-image: url("../resources/images/productDetails/icon-dropdown-arrow.png");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    }
+
+    .custom-select:focus {
+    outline: none;
+    border-color: black;
+    }
+
+    .custom-select::-ms-expand {
+    display: none; 
+    }
+
+
+
+    /*subscription */
+    .subscription-container {
+        background-color: #FAF3F3;
+        padding: 20px;
+        border: 2px solid #DCDCDC;
+        border-radius: 12px;
+        text-align: left;
+        padding: 3%;
+    }
+
+    .subscription-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    }
+
+    .radio-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: #FFFFFF;
+        border: 1px solid #DCDCDC;
+        border-radius: 8px;
+        padding: 3% 6%;
+        cursor: pointer;
+        flex: 1;
+        justify-content: flex-start;
+    }
+
+    .radio-container + .radio-container {
+    margin-left: 1px;
+    }
+
+    .radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    background-color: red;
+    }
+
+    .radio-container .radio-circle {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        border: 2px solid #000000;
+        border-radius: 50%;
+    }
+    
+    .delivery-frequency {
+    margin-bottom: 20px;
+    }
+
+    .delivery-frequency label {
+    font-size: 1.1em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    }
+
+    .select-wrapper {
+    position: relative;
+    width: 100%;
+    }
+
+    .delivery-frequency-dropdown {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    border: 1px solid black;
+    border-radius: 5px;
+    appearance: none;
+    background-color: white;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCAxMCI+PHBhdGggZmlsbD0iIzAwMDAwMCIgZD0iTTIgN0w1IDRsMyAzeiIvPjwvc3ZnPg=='); /* Down arrow SVG */
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    }
+
+    .delivery-frequency-dropdown:focus {
+    outline: none;
+    border-color: black;
+    }
+
+    .add-to-basket {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    }
+
+    .add-to-basket:hover {
+    background-color: #333333;
+    }
+
+    .radio-circle::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: black;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    input[type="radio"]:checked ~ .radio-circle::after {
+        opacity: 1;
+    }
+
+
+
+    /* product info */
+    .product-info {
+        margin-top: 20px;
+        line-height: 1.5;
+    }
+
+
+
+    /*mailing list*/
+    .custom-mailing-list-container {
+    background-color: #F1EBD9;
+    border: 1px solid #DCDCDC;
+    border-radius: 8px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .custom-mailing-list-container h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .custom-mailing-list-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .custom-mailing-list-form label {
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    #custom-email-input {
+        padding: 12px;
+        font-size: 1rem;
+        border: 1px solid #C0C0C0;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .custom-submit-button {
+        width: 100%;
+        padding: 12px 0;
+        background-color: #DCD7C9;
+        border: none;
+        font-size: 1rem;
+        color: #333;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .custom-submit-button:hover {
+    background-color: #D3CCB9;
+    }
+
+    .custom-checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    }
+
+    .custom-checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+    }
+
+</style>
+
+<script>
+    document.querySelectorAll('.radio-container input').forEach(radio => {
+        radio.addEventListener('change', function() {
+            console.log(`Selected: ${this.parentNode.querySelector('span').textContent}`);
+        });
+    });
+
+    document.querySelector('.custom-mailing-list-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('custom-email-input').value;
+    const termsAccepted = document.getElementById('custom-terms-checkbox').checked;
+
+    if (!termsAccepted) {
+        alert('Please agree to the Terms & Conditions.');
+        return;
+    }
+
+    console.log('Email:', email);
+    alert(`Thank you for subscribing, ${email}!`);
+    });
+
+</script>

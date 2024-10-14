@@ -1,0 +1,25 @@
+# Pouch and mutt assesment
+assessment 
+- learnt astro
+- developed astro components
+- routing using pages
+- developed layouts
+- utilised react
+- utilsed typescript
+- utilised props
+- utilised markdown
+- defined global styles from design standards in figma file
+- used poppin font styles across all astro components
+- 
+- developed desktop view
+- developed resposive view
+- 
+- created e2e testing using cypress
+- developed microservice architecture
+- defined docker files for each service
+- deployed services locally using docker compose 
+- created make files to automate processs
+- 
+- aws sam architechure
+- api creation for backend calls
+- 

@@ -1,0 +1,32 @@
+---
+import Main from "../layouts/Main.astro";
+import ProductSideImages from "../components/ProductSideImages.astro";
+import PrioductMainImage from "../components/PrioductMainImage.astro";
+import ProductDetails from "../components/ProductDetails.astro";
+---
+
+<Main title="product">
+    <div class="product-page">
+        <ProductSideImages />
+        <PrioductMainImage />
+        <ProductDetails />
+    </div>
+</Main>
+
+<style>
+    .product-page {
+        display: flex;
+        gap: 40px;
+        padding: 40px;
+    }
+  
+    @media (max-width: 940px) {
+        .product-page {
+            flex-direction: column; 
+            gap: 20px;
+            padding: 20px;
+        }
+    }
+
+
+</style>
