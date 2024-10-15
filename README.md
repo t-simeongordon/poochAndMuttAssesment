@@ -27,7 +27,13 @@ assessment
 # flow
 when going through the site please select the shop from the nav bar going forward to see the product page for assesment
 
-# instructions
+# docs folder
+within the doc folder holds information around the assesment
+- UI - screenshots of the actual website
+- UX - High level flow of the website
+- Architecture - high level decissions made
+
+# Dev instructions
 To start the UI application run the following 
 ``` bash
     make install
