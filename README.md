@@ -23,3 +23,26 @@ assessment
 - aws sam architechure
 - api creation for backend calls
 - 
+
+# flow
+when going through the site please select the shop from the nav bar going forward to see the product page for assesment
+
+# instructions
+To start the UI application run the following 
+``` bash
+    make install
+    make localUI
+```
+
+To run e2e testing
+``` bash
+    make install
+    make localUI
+    make test
+```
+
+To run dev env
+``` bash
+    make install
+    make docker
+```
